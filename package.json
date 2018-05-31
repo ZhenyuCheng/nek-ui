@@ -1,5 +1,5 @@
 {
-  "name": "nek-ui",
+  "name": "nekui",
   "description": "UI components based on RegularJS",
   "version": "0.6.1",
   "main": "./dist/js/nek-ui.js",
