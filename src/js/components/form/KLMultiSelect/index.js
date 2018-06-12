@@ -238,7 +238,7 @@ const KLMultiSelect = Dropdown.extend({
       return;
     }
     if (data.server && cate[data.hasChildKey] && (!cate[data.childKey] || !cate[data.childKey].length)) {
-      data.serverFn(cate).then(function (list) {
+      data.serverFn(cate).then((list) => {
         cate[data.childKey] = list;
         this.dealCate(cate, level, show);
       });
