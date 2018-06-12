@@ -27189,6 +27189,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (data.server && cate[data.hasChildKey] && (!cate[data.childKey] || !cate[data.childKey].length)) {
 	      data.serverFn(cate).then(function (list) {
 	        cate[data.childKey] = list;
+	        if (cate[data.checkKey] && data.multiple) {
+	          _this2.initRootSelected();
+	          _this2.initSelected();
+	        }
 	        _this2.dealCate(cate, level, show);
 	      });
 	    } else {

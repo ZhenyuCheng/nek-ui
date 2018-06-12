@@ -240,6 +240,10 @@ const KLMultiSelect = Dropdown.extend({
     if (data.server && cate[data.hasChildKey] && (!cate[data.childKey] || !cate[data.childKey].length)) {
       data.serverFn(cate).then((list) => {
         cate[data.childKey] = list;
+        if (cate[data.checkKey] && data.multiple) {
+          this.initRootSelected();
+          this.initSelected();
+        }
         this.dealCate(cate, level, show);
       });
     } else {
