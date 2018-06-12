@@ -38,6 +38,7 @@ const _ = require('../../../ui-base/_');
  * @param {boolean}         [options.data.visible=true]             => 是否显示
  * @param {string}          [options.data.class]                    => 补充class
  * @param {number}          [options.data.width]                    => 组件宽度
+ * @param {number}          [options.data.ulWidth]                  => 每个下拉框的宽度
  */
 
 const KLMultiSelect = Dropdown.extend({
