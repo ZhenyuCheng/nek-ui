@@ -27179,6 +27179,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.$update();
 	  },
 	  viewCate: function viewCate(cate, level, show, e) {
+	    var _this2 = this;
+
 	    e && e.stopPropagation();
 	    var data = this.data;
 	    if (data.disabled || data.readonly) {
@@ -27187,14 +27189,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (data.server && cate[data.hasChildKey] && (!cate[data.childKey] || !cate[data.childKey].length)) {
 	      data.serverFn(cate).then(function (list) {
 	        cate[data.childKey] = list;
-	        this.dealCate(cate, level, show);
+	        _this2.dealCate(cate, level, show);
 	      });
 	    } else {
 	      this.dealCate(cate, level, show);
 	    }
 	  },
 	  dealCate: function dealCate(cate, level, show) {
-	    var _this2 = this;
+	    var _this3 = this;
 
 	    var data = this.data;
 	    data.tree[level + 1] = cate[data.childKey] || [];
@@ -27248,7 +27250,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	    }
 	    setTimeout(function () {
-	      _this2.scroll(level);
+	      _this3.scroll(level);
 	    }, 0);
 	  },
 	  scroll: function scroll(level) {
