@@ -1,3 +1,4 @@
+# 这个包是为了与原本的低版本nek-ui共存在同一个工程而发布，与原nek-ui包基本一致
 # nek-ui <sup>[WIP]</sup>
 UI components based on [RegularJS][regularjs]
 
